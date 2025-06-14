@@ -1,19 +1,12 @@
 n = int(input())
 
-cnt = 0
-
 if n == 3:
     print(2)
 else:
-    cnt += n // 7
-
-    x = n % 7
-
-    if x in (4, 6):
-        cnt += 2
-    elif x == 0:
-        pass
+    arr = [0, 1, 1, 1, 2, 1, 2]
+    if n % 7 == 0:
+        print(n // 7)
+    elif n % 7 in (4, 6):
+        print((n // 7) + 2)
     else:
-        cnt += 1
-
-    print(cnt)
+        print((n // 7) + 1)
